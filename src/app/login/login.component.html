@@ -1,0 +1,27 @@
+
+
+<div fxLayout="column" fxLayoutGap="5px" >
+  <div class="mainHeading" fxLayoutAlign="center center">
+      <h3>Welcome To SatTV</h3>
+  </div>
+      <div fxLayout="column" fxLayoutAlign="center center"  class="login">
+         <div fxFlex ="10">
+           <label>User Name: </label>
+                <input matInput placeholder="User Name" [(ngModel)]="userName">
+          </div>
+
+         <div fxFlex ="10">
+           <label>Password : </label>
+              <input matInput placeholder="Password" type="password"  [(ngModel)]="password">
+          </div>
+
+         <div>
+           <button type="submit">Sumit</button>
+         </div>
+
+         <div>
+           <h5> Don't Have an Account?<span (click) = "gotoReg()"> Register Here</span></h5>
+         </div>
+    </div>
+    <mat-checkbox>Check me!</mat-checkbox>
+</div>

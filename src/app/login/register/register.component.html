@@ -1,0 +1,37 @@
+ <form>
+<div fxLayout="column" fxLayoutAlign= "center center" fxLayoutGap ="5px">
+  <div>
+    <h3>Sign Up</h3>
+    <p> Wants to sign up fill out this form</p>
+  </div>
+  <div>
+    <label>Enter User Name: </label>
+    <input  type="text"  name="name" placeholder="User Name" #name1 ngModel>
+    
+  </div>
+
+  <div fxFlex="calc(50% - 25px)">
+    <label>Enter Password: </label>
+    <input type="password" name="pass" placeholder="Password" #pass1 ngModel>
+  </div>
+
+  <div>
+    <label>Enter Mobile Number: </label>
+    <input type="number" name="pass" placeholder="Mobile Number">
+  </div>
+  
+  <div>
+    <label>Enter Email ID: </label>
+    <input type="email" name="email" placeholder="Email">
+  </div>
+
+  <div>
+    <button (click)="signup(name1.value)">Sign Up</button>
+  </div>
+  {{name2}}
+  <button (click) ="getItem()"> Press Me</button>
+</div> 
+</form> 
+
+<button mat-raised-button>Primary</button>
+ 
