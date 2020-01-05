@@ -1,0 +1,66 @@
+<div fxLayout="" fxLayoutGap="35px">
+  <div fxLayout="column"  style="padding-left: 25px">
+    <div fxLayout="">
+      <div>
+        <h4 class="heading">Gold Pack</h4>
+        <ul>
+          <li>Zee</li>
+          <li>Sony</li>
+          <li>Star Plus</li>
+          <li>Net Geo</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="heading">Silver Pack</h4>
+        <ul>
+          <li>Zee</li>
+          <li>Sony</li>
+          <li>Star Plus</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+    </div>
+    <div fxLayout="column" fxLayoutGap="10px" >
+      <p class="para"> Services</p>
+      <div class="span2">
+        <span>Learn English Service </span>
+        <button class="btn1" (click)="buyEnglishService()" mat-button>Subscribe</button>
+        
+      </div>
+
+      <div class="span2">
+        <span>Learn Cooking Service</span>
+        <button class="btn1" (click)="buyCookingService()" mat-button>Subscribe</button>
+      </div>
+    </div>
+    <p>Total Service Cost:{{totalAmt}}</p>
+  </div>
+
+  <div fxLayout="column" fxLayoutGap="4px" style="padding-top: 22px" >
+    <div>Add Package</div>
+    <div fxLayout="column" *ngIf="!userData.package">
+      <mat-form-field>
+          <mat-label>Select package</mat-label>
+        <mat-select [(ngModel)]="pkg.name" (selectionChange)="calculateAmount()">
+          <mat-option *ngFor="let ch of pkgs" [value]="ch.value">
+            {{ch.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label> Select Month</mat-label>
+          <mat-select [(ngModel)]="pkg.month" (selectionChange)="calculateAmount()">
+            <mat-option *ngFor="let ch of month" [value]="ch.value">
+              {{ch.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-error *ngIf="dis" class="ds">Got discount:{{dis}} </mat-error>
+      <h3>Total:{{amount}}</h3>
+
+      <button mat-button [disabled]="!pkg.month && pkg.name" (click)="buy()">Subscribe</button>
+    </div>
+    <div *ngIf="userData.package" style="color: green">You have already subcribe {{userData.package.name}} pack </div>
+  </div>
+</div>

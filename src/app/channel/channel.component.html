@@ -1,0 +1,9 @@
+<div fxLayout="column" style="padding: 35px;">
+        <div *ngFor="let ch of channels">
+                <mat-checkbox *ngIf="checkList(ch)" (change)="evntChange($event,ch)">{{ch.name}}</mat-checkbox>
+        </div>
+</div>
+<label style="padding-left: 35px;">Total:{{tAmount}}</label>
+<div fxLayout="row" fxLayoutGap="5px" class="secDiv" style="    padding: 35px;">
+        <div><button mat-button class="btn1" (click)="buy()" [disabled]="!tAmount">Buy</button></div>
+</div>

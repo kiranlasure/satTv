@@ -1,0 +1,41 @@
+<div fxLayout="column" *ngIf="!view" class="secDiv" style="height: 100%;">
+  <div>  <button class="editbtn1" mat-button (click)="changeView()">back To View</button></div>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Enter Your Name" (input)="formvaliate()"[(ngModel)]="userData.name">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Enter Your Phone Number" (input)="formvaliate()" [(ngModel)]="userData.mobno">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Enter Your Email Id" (input)="formvaliate()" [(ngModel)]="userData.email">
+    </mat-form-field>
+
+   <div> <button class="editbtn1" mat-button (click)="update()" [disabled]="status">Update</button></div>
+</div>
+<div fxLayout="column" class="secDiv" *ngIf="view" style="height: 100%;">
+<div style="display: inline">
+
+</div>
+  <div> <button mat-button class="editbtn1" (click)="changeView()">Edit</button><div>
+
+        <div fxLayout="column" fxLayoutGap="10px">
+
+            <div>
+                    <label>User Id: {{userData.id}}</label>
+            </div>
+            <div>
+                    <label>Name: {{userData.name}}</label>
+            </div>
+            <div>
+                    <label>Mobile Number: {{userData.mobno}}</label>
+            </div>
+            <div>
+                    <label>Account Balance: {{userData.balance}}</label>
+            </div>
+            <div>
+                    <label>Email Id: {{userData.email}}</label>
+            </div>
+        </div>
+</div>

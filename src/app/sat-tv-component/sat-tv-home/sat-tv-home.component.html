@@ -1,0 +1,13 @@
+<div fxLayoutAlign="center center" style="height: 400px">
+    <div fxLayout="row" class="home">
+        <div class="mainDiv">
+            <div fxLayout="column" fxLayoutGap="5px" *ngFor="let data of dataInfo">
+                <div fxLayout="" fxLayoutAlign="start center" class="secDiv" [ngClass]="{activeClass:data.checked}" (click)=clickItem(data)>
+                    {{data.name}}</div>
+            </div>
+        </div>
+        <div class="right" style="height: 100%;">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="mainDiv">
+        <mat-form-field class="example-full-width">
+                <input matInput placeholder="Enter Amount to Recharge" type="number" [(ngModel)]="balance">
+        </mat-form-field>
+</div>
+<div class="secDiv">
+        <button mat-button class="btn" (click)="recharge()" [disabled]="!balance">Recharge</button>
+</div>

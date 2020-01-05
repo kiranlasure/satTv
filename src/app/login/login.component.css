@@ -1,15 +1,35 @@
-.mainHeading{
+.mainHeading {
   width: 100%;
   background: #ffffff;
 }
-.login{
+.login {
   margin-top: 30px;
   height: 50vh;
 }
-.space
-{
+.space {
   margin-left: 5px;
 }
-span{
-  color:blue;
+span {
+  color: blue;
+}
+.heightCss {
+  height: 500px;
+}
+.btn{
+  color: white;
+  background: rgb(31, 104, 31);
+  width: 10vh;
+}
+.btn1{
+  color:white;
+  
+  background: #706da7;
+    border-radius: 11px;
+    width: 109px
+}
+.btn3{
+  padding-left: 112px;
+}
+.head5{
+  padding-left: 50px;
 }

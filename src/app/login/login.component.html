@@ -1,27 +1,24 @@
-
-
-<div fxLayout="column" fxLayoutGap="5px" >
-  <div class="mainHeading" fxLayoutAlign="center center">
+<div fxLayout="column" class="heightCss" fxLayoutAlign="center center" fxLayoutGap="25px">
+  <div style="width: 400px;background: #cec5e0;;padding: 15px;
+  border-radius: 15px;">
+    <div fxLayoutAlign="center center">
       <h3>Welcome To SatTV</h3>
-  </div>
-      <div fxLayout="column" fxLayoutAlign="center center"  class="login">
-         <div fxFlex ="10">
-           <label>User Name: </label>
-                <input matInput placeholder="User Name" [(ngModel)]="userName">
-          </div>
-
-         <div fxFlex ="10">
-           <label>Password : </label>
-              <input matInput placeholder="Password" type="password"  [(ngModel)]="password">
-          </div>
-
-         <div>
-           <button type="submit">Sumit</button>
-         </div>
-
-         <div>
-           <h5> Don't Have an Account?<span (click) = "gotoReg()"> Register Here</span></h5>
-         </div>
     </div>
-    <mat-checkbox>Check me!</mat-checkbox>
+    <div fxLayout="column" fxLayoutGap="5px">
+      <mat-form-field>
+        <input matInput placeholder="User Name" [(ngModel)]="userForm.userName">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Password" type="password" [(ngModel)]="userForm.password">
+      </mat-form-field>
+      <mat-error *ngIf="status==2">Please Check username && password</mat-error>
+      
+      <div class="btn3">
+          <button mat-button class="btn1"  (click)="login()" [disabled]="!userForm.userName || !userForm.password">Login</button>
+      </div>
+      <div>
+        <h5 class="head5"> Don't Have an Account?  <span (click)="gotoReg()" style="cursor: pointer"> Register Here</span></h5>
+      </div>
+    </div>
+  </div>
 </div>

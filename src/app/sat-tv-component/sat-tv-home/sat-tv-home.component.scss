@@ -1,0 +1,36 @@
+.mainDiv {
+  background: #ded9d9;
+  width: 100px;
+}
+.secDiv {
+  width: 100px;
+  height: 50px;
+  padding-left: 10px;
+  border-bottom: 1px solid sienna;
+  cursor: pointer;
+}
+
+.secDiv1 {
+  width: 300px;
+  height: 150px;
+  border-radius: 5px;
+}
+.home {
+  box-shadow: 0.2px 0.5px 0.1px 0.31px silver;
+  box-shadow: silver;
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+  width: 600px;
+  background: aliceblue;
+  box-shadow: 1px silver;
+  border-radius: 2px;
+  height: 350px;
+}
+.activeClass {
+  background: rgb(196, 213, 228);
+}
+.right {
+  width: 100%;
+  position: relative;
+}

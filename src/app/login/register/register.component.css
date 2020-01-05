@@ -1,5 +1,16 @@
-.c1{
-      height: 4vh;
-      width: 4vh;
-      background: red;
+.secDiv
+{
+    width: 538px;
+    height: 500px;
+    background: rgb(226, 233, 234);
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    border-radius: 20px;
+    padding: 50px;
+}
+.btn{
+      background:green;
+      width:30vh;
+      margin-left: 100px;
 }

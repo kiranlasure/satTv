@@ -1,4 +1,4 @@
- <form>
+<!-- <form>
 <div fxLayout="column" fxLayoutAlign= "center center" fxLayoutGap ="5px">
   <div>
     <h3>Sign Up</h3>
@@ -34,4 +34,33 @@
 </form> 
 
 <button mat-raised-button>Primary</button>
- 
+  -->
+
+<div fxLayout="" fxLayoutAlign="center center" style="width: 100%;height:640px;background:#4bbbdb;">
+  <div fxLayout="column" class="secDiv">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Enter Your Name" (input)="formvaliate()" [(ngModel)]="userForm.name">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="password" placeholder="Enter Password" (input)="formvaliate()" [(ngModel)]="userForm.password">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Re-enter Password" (input)="formvaliate()" [(ngModel)]="userForm.repassword">
+    </mat-form-field>
+    <mat-error *ngIf="userForm.password && userForm.repassword && userForm.password!= userForm.repassword ">Reenter same
+      password</mat-error>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Enter Your Phone Number" [pattern]="'[789][0-9]{9}'" (input)="formvaliate()" [(ngModel)]="userForm.mobno">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="email" placeholder="Enter Your Email Id" (input)="formvaliate()" [(ngModel)]="userForm.email">
+    </mat-form-field>
+
+    <button mat-button  (click)="register()" color="Primary" [disabled]="status">Register</button>
+  </div>
+
+</div>

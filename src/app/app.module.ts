@@ -3,16 +3,46 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MaterialModule } from './modules/material.module';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './login/register/register.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material';
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { ChannelComponent } from './channel/channel.component';
+import { AddPackageComponent } from './add-package/add-package.component';
+import { SatTvDataService } from './services/sat-tv-data.service';
+import { SatTvHomeComponent } from './sat-tv-component/sat-tv-home/sat-tv-home.component';
+import { HomeDataComponent } from './sat-tv-component/sat-tv-home/home-data/home-data.component';
+import { RechargeComponent } from './sat-tv-component/sat-tv-home/recharge/recharge.component';
+import { CurrentSubComponent } from './sat-tv-component/sat-tv-home/current-sub/current-sub.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    UpdateProfileComponent,
+    ChannelComponent,
+    AddPackageComponent,
+    SatTvHomeComponent,
+    HomeDataComponent,
+    RechargeComponent,
+    CurrentSubComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    FlexLayoutModule
   ],
-  providers: [],
+  providers: [SatTvDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

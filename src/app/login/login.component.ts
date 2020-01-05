@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import { SatTvDataService } from '../services/sat-tv-data.service';
 
 @Component({
   selector: 'app-login',
@@ -7,15 +8,30 @@ import { Router } from "@angular/router";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  userForm = {
+    userName: '',
+    password: ''
+  }
+  status;
+  constructor(private router: Router, private satService: SatTvDataService) { }
 
   ngOnInit() {
   }
-  
-  gotoReg()
-  {        
-        this.router.navigate(['/reg']);
+
+  login() {
+    if (this.userForm.userName && this.userForm.password) {
+      if (this.satService.loginUserValidate(this.userForm)) {
+        alert("Login Successfully..");
+        this.router.navigate(['home']);
+      }
+      else {
+        this.status = 2;
+      }
+    }
+  }
+
+  gotoReg() {
+    this.router.navigate(['/reg']);
   }
 
 }
