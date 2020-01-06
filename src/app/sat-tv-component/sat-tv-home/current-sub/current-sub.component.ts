@@ -9,18 +9,10 @@ import { SatTvDataService } from 'src/app/services/sat-tv-data.service';
 export class CurrentSubComponent implements OnInit {
 
   userData;
- 
-  // userkeys:any = Object.keys(this.userData);
-  // userData1 = [];
-  // foreach( item of userkeys){
-  //   this.userData1.push(userkeys[item])
-  // }
-  // userdata1 = JSON.stringify(this.userData);
   constructor(private sat: SatTvDataService) { }
 
   ngOnInit() {
     this.userData = JSON.parse(this.sat.getData('singleUserData'));
-    console.log(this.userData);
   }
 
 }

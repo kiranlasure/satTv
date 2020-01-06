@@ -3,7 +3,7 @@
         <div *ngIf="userData.package.month">Pack Activation Months: {{userData.package.month}}</div>
         <span *ngIf="userData.channels.length"> Activated channels</span>
         <ul *ngFor="let ch of userData.channels">
-            <li>{{ch.name}}</li>
-        </ul>   
-        <div>Current Activated Service:{{userData.service}}</div>
+                        <li>{{ch.name}}</li>
+        </ul> 
+        <div *ngIf="userData.service">Current Activated Service:{{userData.service}}</div>
 </div>

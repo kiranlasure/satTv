@@ -17,7 +17,7 @@ export class AddPackageComponent implements OnInit {
     name: '',
     month: 0
   }
-
+  isSufficieantBalance = false;
   eng = 'LearnEnglish';
   cook = 'LearnCooking';
   goldPrize = 100;
@@ -85,6 +85,7 @@ export class AddPackageComponent implements OnInit {
     if(this.userData.balance > this.totalAmt)
     {
       this.sat.buyengService(this.totalAmt,this.userData,this.eng)
+      this.isSufficieantBalance = true;
       alert('successfully Suscribe');
     }
     else
@@ -97,7 +98,8 @@ export class AddPackageComponent implements OnInit {
     this.totalAmt = this.totalAmt + this.learnCook;
     if(this.userData.balance > this.totalAmt)
     {
-      this.sat.buycookService(this.totalAmt, this.userData, this.cook);
+      this.sat.buycookService(this.totalAmt, this.userData, this.cook)
+      this.isSufficieantBalance = true;
       alert('successfully Suscribe');
     }
     else

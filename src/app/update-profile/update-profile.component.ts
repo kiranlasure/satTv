@@ -20,7 +20,6 @@ export class UpdateProfileComponent implements OnInit {
   status = true;
   ngOnInit() {
     this.userData = JSON.parse(this.satService.getData('singleUserData'));
-    console.log(this.userData);
     this.formvaliate();
   }
   changeView() {

@@ -21,20 +21,22 @@
     </div>
     <div>
     </div>
-    <div fxLayout="column" fxLayoutGap="10px" >
+    <div fxLayout="column" fxLayoutGap="10px" *ngIf="!userData.service">
       <p class="para"> Services</p>
       <div class="span2">
-        <span>Learn English Service </span>
-        <button class="btn1" (click)="buyEnglishService()" mat-button>Subscribe</button>
+        <span>English Service:  </span>
+        <div class="leftPadd"> <button class="btn1" (click)="buyEnglishService()" mat-button>Subscribe</button></div>
         
       </div>
 
       <div class="span2">
-        <span>Learn Cooking Service</span>
-        <button class="btn1" (click)="buyCookingService()" mat-button>Subscribe</button>
+        <span>Cooking Service:   </span>
+        <div class="leftPadd1"><button class="btn1" (click)="buyCookingService()" mat-button>Subscribe</button></div>
       </div>
+      <p *ngIf="isSufficieantBalance">Total Service Cost:{{totalAmt}}</p>
     </div>
-    <p>Total Service Cost:{{totalAmt}}</p>
+    <div *ngIf="userData.service" style="color: rgb(128, 0, 0)">You have already subcribe {{userData.service}} Service </div>
+    
   </div>
 
   <div fxLayout="column" fxLayoutGap="4px" style="padding-top: 22px" >
@@ -61,6 +63,6 @@
 
       <button mat-button [disabled]="!pkg.month && pkg.name" (click)="buy()">Subscribe</button>
     </div>
-    <div *ngIf="userData.package" style="color: green">You have already subcribe {{userData.package.name}} pack </div>
+    <div *ngIf="userData.package" style="color: rgb(128, 0, 0)">You have already subcribe {{userData.package.name}} Pack </div>
   </div>
 </div>

@@ -13,7 +13,10 @@
     display: inherit;
 }
 .btn1{
-    background: #7d9faf;
+    background: #c0d0d8;
+    /* width: 3px; */
+    padding: 1px;
+    height: 37px;
 }
 .para{
     margin-bottom: 10px;
@@ -24,4 +27,10 @@
 .heading{
     color: black;
     font-family: sans-serif;
+}
+.leftPadd{
+    padding-left: 30px;
+}
+.leftPadd1{
+    padding-left: 26px;
 }

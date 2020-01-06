@@ -26,7 +26,7 @@ export class SatTvDataService implements OnInit {
   },
   {
     id:4,
-    name: "Discovary",
+    name: "Discovary 10 Rs",
     prize: 10
   },
   {
@@ -38,18 +38,18 @@ export class SatTvDataService implements OnInit {
 
   userData = [{
     id: 1,
-    username: 'dnyaneshwar',
+    username: 'kiran',
     password: '123'
   }];
   userFormData = [{
     id: 1,
-    mobno: '8888923290',
+    mobno: '7773906426',
     name: '',
     package: '',
     service: '',
     balance: 100,
     channels: [],
-    email: 'dnyaneshwarsukashe@gmail.com'
+    email: 'kiranlasure95@gmail.com'
   }]
 
   ngOnInit() {
@@ -92,8 +92,6 @@ export class SatTvDataService implements OnInit {
 
   loginUserValidate(data) {
     this.ngOnInit();
-    console.log(data);
-    console.log(this.userData);
     const ft = this.userData.filter(res => res.username == data.userName && res.password == data.password);
     if (ft.length) {
       this.userFormData.forEach(res => {
@@ -108,7 +106,6 @@ export class SatTvDataService implements OnInit {
   }
   updateData(data) {
     this.ngOnInit();
-    console.log(data);
     this.userFormData.forEach(res => {
       if (res.id == data.id) {
         res.email = data.email;
@@ -117,28 +114,22 @@ export class SatTvDataService implements OnInit {
       }
 
     })
-    console.log(this.userFormData);
     localStorage.setItem('singleUserData', JSON.stringify(data));
     localStorage.setItem('userFormData', JSON.stringify(this.userFormData));
   }
   setBalance(bl, data) {
     this.ngOnInit();
-    console.log(data);
-    console.log(bl);
     this.userFormData.forEach(res => {
       if (res.id == data.id) {
         res.balance = res.balance + bl;
         data.balance = data.balance + bl;
       }
     })
-    console.log(this.userFormData);
     localStorage.setItem('singleUserData', JSON.stringify(data));
     localStorage.setItem('userFormData', JSON.stringify(this.userFormData));
   }
   addChannel(list, data, amount) {
     this.ngOnInit();
-    console.log(this.userFormData);
-    console.log(data)
     this.userFormData.forEach(res => {
       if (res.id == data.id) {
         res.channels= [res.channels,...list];
@@ -152,8 +143,6 @@ export class SatTvDataService implements OnInit {
   }
   buyPack(pkg, data, amount) {
     this.ngOnInit();
-    console.log(this.userFormData);
-    console.log(data)
     this.userFormData.forEach(res => {
       if (res.id == data.id) {
         res.balance = res.balance - amount;
@@ -168,7 +157,6 @@ export class SatTvDataService implements OnInit {
   buyengService(totalAmt, data ,eng)
   {
     this.ngOnInit();
-    console.log(totalAmt);
     this.userFormData.forEach(res => {
       if (res.id == data.id) {
         res.balance = res.balance - totalAmt;
@@ -177,7 +165,6 @@ export class SatTvDataService implements OnInit {
         data.service = eng;
       }
   })
-  console.log('singleUserData', JSON.stringify(data));
   localStorage.setItem('singleUserData', JSON.stringify(data));
   localStorage.setItem('userFormData', JSON.stringify(this.userFormData));
  }
@@ -193,7 +180,6 @@ export class SatTvDataService implements OnInit {
         data.service = cook;
       }
   })
-  console.log('singleUserData', JSON.stringify(data));
   localStorage.setItem('singleUserData', JSON.stringify(data));
   localStorage.setItem('userFormData', JSON.stringify(this.userFormData));
  }

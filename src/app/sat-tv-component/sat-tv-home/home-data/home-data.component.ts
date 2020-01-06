@@ -12,7 +12,6 @@ export class HomeDataComponent implements OnInit {
   userData;
   ngOnInit() {
     this.userData = JSON.parse(this.satService.getData('singleUserData'));
-    console.log(this.userData)
   }
 
 }
