@@ -9,6 +9,7 @@ import { SatTvHomeComponent } from './sat-tv-component/sat-tv-home/sat-tv-home.c
 import { HomeDataComponent } from './sat-tv-component/sat-tv-home/home-data/home-data.component';
 import { RechargeComponent } from './sat-tv-component/sat-tv-home/recharge/recharge.component';
 import { CurrentSubComponent } from './sat-tv-component/sat-tv-home/current-sub/current-sub.component';
+import { CustomerDetailsComponent } from './sat-tv-component/sat-tv-home/customer-details/customer-details.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
 
     ]
   },
+  {path:'customer',component:CustomerDetailsComponent}
 
   
 ];

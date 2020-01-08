@@ -18,6 +18,8 @@ import { SatTvHomeComponent } from './sat-tv-component/sat-tv-home/sat-tv-home.c
 import { HomeDataComponent } from './sat-tv-component/sat-tv-home/home-data/home-data.component';
 import { RechargeComponent } from './sat-tv-component/sat-tv-home/recharge/recharge.component';
 import { CurrentSubComponent } from './sat-tv-component/sat-tv-home/current-sub/current-sub.component';
+import { CustomerDetailsComponent } from './sat-tv-component/sat-tv-home/customer-details/customer-details.component';
+import { ChangecolorDirective } from './sat-tv-component/sat-tv-home/changecolor.directive';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { CurrentSubComponent } from './sat-tv-component/sat-tv-home/current-sub/
     HomeDataComponent,
     RechargeComponent,
     CurrentSubComponent,
+    CustomerDetailsComponent,
+    ChangecolorDirective,
 
   ],
   imports: [
