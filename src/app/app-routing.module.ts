@@ -10,6 +10,7 @@ import { HomeDataComponent } from './sat-tv-component/sat-tv-home/home-data/home
 import { RechargeComponent } from './sat-tv-component/sat-tv-home/recharge/recharge.component';
 import { CurrentSubComponent } from './sat-tv-component/sat-tv-home/current-sub/current-sub.component';
 import { CustomerDetailsComponent } from './sat-tv-component/sat-tv-home/customer-details/customer-details.component';
+import { UserModule } from './modules/userModule/user/user.module';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -26,8 +27,8 @@ const routes: Routes = [
 
     ]
   },
-  {path:'customer',component:CustomerDetailsComponent}
-
+  {path:'customer',component:CustomerDetailsComponent},
+  // { path: 'user', loadChildren: () => import('../user/user.module').then(m => m.UserModule) },
   
 ];
 
