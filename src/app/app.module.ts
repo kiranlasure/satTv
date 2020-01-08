@@ -20,6 +20,7 @@ import { RechargeComponent } from './sat-tv-component/sat-tv-home/recharge/recha
 import { CurrentSubComponent } from './sat-tv-component/sat-tv-home/current-sub/current-sub.component';
 import { CustomerDetailsComponent } from './sat-tv-component/sat-tv-home/customer-details/customer-details.component';
 import { ChangecolorDirective } from './sat-tv-component/sat-tv-home/changecolor.directive';
+import { SqrtPipe } from './sat-tv-component/sat-tv-home/pipe/sqrt.pipe';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ChangecolorDirective } from './sat-tv-component/sat-tv-home/changecolor
     CurrentSubComponent,
     CustomerDetailsComponent,
     ChangecolorDirective,
+    SqrtPipe,
 
   ],
   imports: [
