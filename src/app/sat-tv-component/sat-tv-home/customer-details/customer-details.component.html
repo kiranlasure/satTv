@@ -10,3 +10,13 @@
     </div>
     <b>Square root of 25 is: {{25 | sqrt}}</b>
 </div>
+
+<div fxLayout="row" fxLayoutGap="5px" *ngFor="let per of person">
+    
+        <div>{{per.id}} </div>
+        <div>{{per.name | uppercase}}</div>
+        <div>{{per.MiddleName}}</div>
+        <div>{{per.LastName}} </div>
+        <button (click)="check(per)">Store</button>
+        <button (click)="getData()">get</button>
+</div>
