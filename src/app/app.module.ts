@@ -21,6 +21,11 @@ import { CurrentSubComponent } from './sat-tv-component/sat-tv-home/current-sub/
 import { CustomerDetailsComponent } from './sat-tv-component/sat-tv-home/customer-details/customer-details.component';
 import { ChangecolorDirective } from './sat-tv-component/sat-tv-home/changecolor.directive';
 import { SqrtPipe } from './sat-tv-component/sat-tv-home/pipe/sqrt.pipe';
+import { CustomerDataServiceService } from './services/customer-data-service.service';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpErrorInterceptor } from './http-error.interceptor';
+import { AuthService } from './services/auth.service';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +42,7 @@ import { SqrtPipe } from './sat-tv-component/sat-tv-home/pipe/sqrt.pipe';
     CustomerDetailsComponent,
     ChangecolorDirective,
     SqrtPipe,
+    
 
   ],
   imports: [
@@ -46,9 +52,18 @@ import { SqrtPipe } from './sat-tv-component/sat-tv-home/pipe/sqrt.pipe';
     FormsModule,
     BrowserAnimationsModule,
     MatInputModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ],
-  providers: [SatTvDataService],
+  providers: [SatTvDataService,CustomerDataServiceService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptor,
+      multi: true
+    },
+    AuthService
+  ]
+  ,
   bootstrap: [AppComponent]
 })
 export class AppModule { }

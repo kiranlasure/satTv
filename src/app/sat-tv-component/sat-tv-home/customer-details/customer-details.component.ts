@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomerDataServiceService } from 'src/app/services/customer-data-service.service';
 
 @Component({
   selector: 'app-customer-details',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerDetailsComponent implements OnInit {
 
+
+  
   person =[
     {
       id:101,
@@ -32,11 +35,43 @@ export class CustomerDetailsComponent implements OnInit {
       MiddleName:"Balu",
       LastName:"Lasure"
     }
-  ]
-  constructor() { }
+  ];
+
+  customer=[];
+  constructor(private cstservice: CustomerDataServiceService) { }
 
   ngOnInit() {
+    this.cstservice.getCustomers().subscribe(data=> this.customer = data);
   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   check(data1){
     localStorage.setItem("data",data1); 
