@@ -25,6 +25,7 @@ import { CustomerDataServiceService } from './services/customer-data-service.ser
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpErrorInterceptor } from './http-error.interceptor';
 import { AuthService } from './services/auth.service';
+import { AuthGuardService } from './services/auth-guard.service';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { AuthService } from './services/auth.service';
       useClass: HttpErrorInterceptor,
       multi: true
     },
-    AuthService
+    AuthService,
+    AuthGuardService
   ]
   ,
   bootstrap: [AppComponent]
