@@ -7,7 +7,7 @@ import { MaterialModule } from './modules/material.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
@@ -54,7 +54,8 @@ import { AuthGuardService } from './services/auth-guard.service';
     BrowserAnimationsModule,
     MatInputModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [SatTvDataService,CustomerDataServiceService,
     {

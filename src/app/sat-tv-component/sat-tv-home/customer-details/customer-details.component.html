@@ -1,11 +1,5 @@
-
-<table border="">
-    <tr>
-        <th>Name</th>
-        <th>Mobile Number</th>
-    </tr>
-    <tr *ngFor="let cst of customer">
-        <td>{{cst.Name}}</td>
-        <td>{{cst.Mo_No}}</td>
-    </tr>
-</table>
+<label>
+    Name:
+    <input type="text" [formControl]="name">
+</label>
+<p>HI</p>

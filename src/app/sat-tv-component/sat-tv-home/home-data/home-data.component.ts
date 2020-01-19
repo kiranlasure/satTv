@@ -15,6 +15,6 @@ export class HomeDataComponent implements OnInit {
     this.userData = JSON.parse(this.satService.getData('singleUserData'));
   }
   gotoCustomerDetails(){
-    this.router.navigate(['/customer']);
+    this.router.navigate(['/cst']);
   }
 }

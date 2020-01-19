@@ -1,5 +1,9 @@
-.secDiv{
-        width: 50vh;
-        height: 10vh;
-        background: rgb(216, 83, 150);
+img{
+    width: 54vh;
+    height: 62vh;
+    border: 1px solid rgb(112, 65, 189);
+    border-radius: 15px;
+    cursor: pointer;
+    // -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
 }

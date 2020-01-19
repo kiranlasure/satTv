@@ -10,13 +10,11 @@ import { HomeDataComponent } from './sat-tv-component/sat-tv-home/home-data/home
 import { RechargeComponent } from './sat-tv-component/sat-tv-home/recharge/recharge.component';
 import { CurrentSubComponent } from './sat-tv-component/sat-tv-home/current-sub/current-sub.component';
 import { CustomerDetailsComponent } from './sat-tv-component/sat-tv-home/customer-details/customer-details.component';
-import { 
-  AuthGuardService as AuthGuard 
-} from './services/auth.service';
+
 
 const routes: Routes = [
   { path: '', component: LoginComponent,
-  canActivate: [AuthGuard] 
+  
 },
   { path: 'reg', component: RegisterComponent },
   {
@@ -28,12 +26,9 @@ const routes: Routes = [
       { path: 'addPack', component: AddPackageComponent },
       { path: 'recharge', component:RechargeComponent},
       { path: 'currentsub', component:CurrentSubComponent }
-
     ]
   },
-  {path:'customer',component:CustomerDetailsComponent},
-  // { path: 'user', loadChildren: () => import('../user/user.module').then(m => m.UserModule) },
-  
+  { path:'cst', component:CustomerDetailsComponent}
 ];
 
 @NgModule({
