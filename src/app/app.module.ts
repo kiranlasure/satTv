@@ -26,7 +26,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpErrorInterceptor } from './http-error.interceptor';
 import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './services/auth-guard.service';
-import { LogComponent } from './login/log/log.component';
+
 
 
 @NgModule({
@@ -44,7 +44,7 @@ import { LogComponent } from './login/log/log.component';
     CustomerDetailsComponent,
     ChangecolorDirective,
     SqrtPipe,
-    LogComponent,
+ 
     
 
   ],
