@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-customer-details',
@@ -8,12 +9,16 @@ import { FormControl } from '@angular/forms';
 })
 export class CustomerDetailsComponent implements OnInit {
 
-  name = new FormControl('Kiran');
-  constructor() {}
+  myName='kiran'
+
+  constructor(private router: Router) {}
   ngOnInit() {
     
   }
-
+  gototp(){
+    this.router.navigate(['/tp']);
+    
+  }
   
  
 }

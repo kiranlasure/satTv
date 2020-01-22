@@ -10,6 +10,7 @@ import { HomeDataComponent } from './sat-tv-component/sat-tv-home/home-data/home
 import { RechargeComponent } from './sat-tv-component/sat-tv-home/recharge/recharge.component';
 import { CurrentSubComponent } from './sat-tv-component/sat-tv-home/current-sub/current-sub.component';
 import { CustomerDetailsComponent } from './sat-tv-component/sat-tv-home/customer-details/customer-details.component';
+import { TpComponent } from './sat-tv-component/sat-tv-home/customer-details/tp/tp.component';
 
 
 const routes: Routes = [
@@ -28,7 +29,8 @@ const routes: Routes = [
       { path: 'currentsub', component:CurrentSubComponent }
     ]
   },
-  { path:'cst', component:CustomerDetailsComponent}
+  { path:'cst', component:CustomerDetailsComponent},
+  { path:'tp', component:TpComponent}
 ];
 
 @NgModule({

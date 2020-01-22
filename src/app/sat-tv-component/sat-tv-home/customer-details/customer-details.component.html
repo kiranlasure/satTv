@@ -1,5 +1,77 @@
-<label>
-    Name:
-    <input type="text" [formControl]="name">
-</label>
-<p>HI</p>
+<div fxLayout="row" fxLayoutGap="4px" class="parent">
+    <div class="box">hi</div>
+    <div class="box" [ngStyle]="{background: 'yellow'}">hi</div>
+    <div class="box">hi</div>
+    <div class="box">hi</div>
+</div>
+
+<div fxLayout="column" class="parent2" fxLayoutGap="4px">
+        <div class="box">hi</div>
+        <div class="box">hi</div>
+        <div class="box">hi</div>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="4px" class="parent3">
+    <div class="box">HI</div>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="end end" >
+    <div class="box">Hi</div>
+</div>
+
+<div fxLayout="row wrap" fxLayoutGap="4px" fxLayoutGap="4px" class="parent4">
+        <div class="box">hi</div>
+        <div class="box">hi</div>
+        <div class="box">hi</div>
+        <div class="box">hi</div>
+        <div class="box">hi</div>
+        <div class="box">hi</div>
+        <div class="box">hi</div>
+        <div class="box">hi</div>
+        <div class="box">hi</div>
+        <div class="box">hi</div>
+        <div class="box">hi</div>
+        <div class="box">hi</div>
+        <div class="box">hi</div>
+        <div class="box">hi</div>
+        <div class="box">hi</div>
+        <div class="box">hi</div>
+</div>
+
+<div fxLayout="" fxLayoutAlign="center center" style="width: 400px;height:400px;background:chocolate;margin-top:4px">
+    <div style="width: 100px;height:100px;background:red">Hi</div>
+</div>
+
+<div fxLayout="" fxLayoutAlign="start end" style="width: 400px;height:400px;background:chocolate;margin-top:4px" >
+        <div style="width: 100px;height:100px;background:red">Hi</div>
+</div>
+
+<div fxLayout="" fxLayoutAlign="center end" style="width: 400px;height:400px;background:chocolate;margin-top:4px" >
+        <div style="width: 100px;height:100px;background:red">Hi</div>
+</div>
+
+<div fxLayout="" fxLayoutAlign="end end" style="width: 400px;height:400px;background:chocolate;margin-top:4px" >
+        <div style="width: 100px;height:100px;background:red">Hi</div>
+</div>
+
+<div fxLayout="" fxLayoutAlign="end" style="width: 400px;height:400px;background:chocolate;margin-top:4px" >
+        <div style="width: 100px;height:100px;background:red">Hi</div>
+</div>
+
+<div class="parent6">
+    <div class="box2">hi</div>
+    <div class="box2" class="two">hi</div>
+    <div class="box2">hi</div>
+    <div class="box2">hi</div>
+</div>
+
+
+<div fxLayout="" style="width: 400px;height:400px;border: 2px dotted black;margin-top:4px" >
+        <div style="width: 100px;height:100px;background:red;padding-top: 10px;
+        margin-left: 45px;">Hi</div>
+</div>
+<div *ngIf="myName=='kiran'"> My Name is Kiran</div>
+
+<button (click)="gototp()" class="tp">Tp</button>
+
+

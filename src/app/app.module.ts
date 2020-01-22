@@ -26,6 +26,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpErrorInterceptor } from './http-error.interceptor';
 import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './services/auth-guard.service';
+import { TpComponent } from './sat-tv-component/sat-tv-home/customer-details/tp/tp.component';
 
 
 
@@ -44,8 +45,8 @@ import { AuthGuardService } from './services/auth-guard.service';
     CustomerDetailsComponent,
     ChangecolorDirective,
     SqrtPipe,
+    TpComponent,
  
-    
 
   ],
   imports: [

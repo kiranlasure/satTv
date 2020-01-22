@@ -1,9 +1,46 @@
-img{
-    width: 54vh;
-    height: 62vh;
-    border: 1px solid rgb(112, 65, 189);
-    border-radius: 15px;
-    cursor: pointer;
-    // -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
+.parent{
+    border: 1px dotted black;
+    width:400px;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    background: red;
+}
+.parent2{
+    border: 1px dotted black;
+    margin-top: 4px;
+}
+.parent3{
+    margin-top: 4px;
+}
+.parent4{
+    margin-top: 4px;
+}
+.parent6{
+    display: inline-block;
+    margin-top: 4px;
+}
+.box2{
+    height: 100px;
+    width: 100px;
+    background: red;
+    display: inline-block;
+    margin-left: 4px;
+}
+.two{
+    background: green;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    margin-left: 4px;
+    position: absolute;
+    left: 20px;
+}
+.tp{
+    color:navy;
+    background: rgb(140, 240, 178);
+    width: 105px;
+    height: 31px;
+    cursor: progress;
 }
